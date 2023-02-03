@@ -2,20 +2,19 @@ package com.arquitecturajava;
 
 import java.util.stream.IntStream;
 
-public class Principal11 {
+public class Principal14Arrays {
 
 	public static void main(String[] args) {
 
-		
-		int i=0;
-		
+		int i = 0;
+
+		// siempre se ejecuta la primera vez
 		do {
+			// i++;
 			System.out.println(i);
-			i++;
-		}while (i<10);
-	
-		
-		
+			i = i + 1;
+		} while (i < 10);
+
 	}
 
 }
