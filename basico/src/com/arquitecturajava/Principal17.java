@@ -5,30 +5,26 @@ public class Principal17 {
 	public static void main(String[] args) {
 
 		
-	int minumero=2;
-	System.out.println(minumero);
-	minumero++;
+	int[] minumero= new int[] {1};
 	
-	System.out.println(minumero);
-		
-	// llamado a incremntar
-	// lo que haces es incrementar la copia no
-	// su valor original
+	minumero[0]= minumero[0]+1;
+	
+	System.out.println(minumero[0]);
+	
 	incrementar(minumero);
 	
-	System.out.println(minumero);
-	
+	System.out.println(minumero[0]);
 	}
 	
-	// un tipo basico en java a una funcion
-	// se le pasa por valor
-	// es decir se realiza una copia del valor orieginal
-	// por lo tanto la funcion tiene una copia
+	//objetos en java se pasan por referencia
+	// los tipos basicos se pasan por valor
+	// es decir se copian y por lo tanto no afectan
+	// al manejo del programa principal
 	
-	public  static void incrementar( int numero) {
+	public  static void incrementar( int[] lista) {
 		
-		// si esto es una copia
-		numero++;
+	
+		lista[0]=lista[0]+1;
 		
 	}
 
