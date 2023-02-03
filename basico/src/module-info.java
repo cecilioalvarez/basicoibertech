@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author cecilioalvarezcaules
+ *
+ */
+module basico {
+}
