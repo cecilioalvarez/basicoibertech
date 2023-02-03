@@ -9,6 +9,8 @@ public class Principal19 {
 		// construimos una funcion que recibe el
 		// array
 
+		// double tipo para el sumatorio
+
 		int[] lista = new int[] { 5, 4, 2, 1, 7, 8, 2 };
 
 		int contador = aprobados(lista);
@@ -28,6 +30,19 @@ public class Principal19 {
 			}
 		}
 		return contador;
+	}
+
+	private static float media(int[] lista) {
+		float sumar = 0;
+
+		for (int i = 0; i < lista.length; i++) {
+
+			sumar =sumar+ lista[i];
+
+		}
+
+		float resultado = sumar / lista.length;
+		return resultado;
 	}
 
 }
