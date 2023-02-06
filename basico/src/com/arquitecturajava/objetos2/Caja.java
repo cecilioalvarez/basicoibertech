@@ -8,10 +8,14 @@ public class Caja {
 	private int lado3;
 
 	public double getPeso() {
+	
 		return peso;
 	}
 
+	// ensombrece o oculta a la variable peso
+	//variable local
 	public void setPeso(double peso) {
+		// operador this
 		this.peso = peso;
 	}
 
