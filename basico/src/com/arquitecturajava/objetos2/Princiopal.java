@@ -7,12 +7,12 @@ public class Princiopal {
 		// new para instanciar o construir un objeto
 		
 		Caja c= new Caja();
-		c.setPeso(20);
-		c.setLado1(2);
-		c.setLado2(4);
-		c.setLado3(7);
+		c.setPeso(2);
+		c.setLado1(20);
+		c.setLado2(2);
+		c.setLado3(2);
 
-		System.out.println(c.getPeso());
+		System.out.println(c.getLado1());
 		System.out.println(c.volumen());
 
 	}
