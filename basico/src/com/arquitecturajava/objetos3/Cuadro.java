@@ -32,10 +32,9 @@ public class Cuadro {
 		this.marco = marco;
 	}
 	public Cuadro(String titulo, int lado1, int lado2,  int marco) {
-		super();
-		this.lado1 = lado1;
-		this.lado2 = lado2;
-		this.titulo = titulo;
+		
+		//reutilio el codigo
+		this(titulo,lado1,lado2);
 		this.marco = marco;
 	}
 	
