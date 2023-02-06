@@ -1,4 +1,4 @@
-package com.arquitecturajava.objetos2;
+package com.arquitecturajava.objetos3;
 
 public class Princiopal {
 
@@ -6,12 +6,7 @@ public class Princiopal {
 		
 		// new para instanciar o construir un objeto
 		
-		// se usaba el constructor por defecto
-		Caja c= new Caja();
-		c.setPeso(2);
-		c.setLado1(20);
-		c.setLado2(2);
-		c.setLado3(2);
+		Caja c= new Caja(2,20,2,2);
 
 		System.out.println(c.getLado1());
 		System.out.println(c.volumen());
