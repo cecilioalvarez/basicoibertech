@@ -1,6 +1,7 @@
 package com.arquitecturajava.objetos4;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Principal {
 
@@ -18,9 +19,19 @@ public class Principal {
 			System.out.println(lista.get(i));
 		}
 		
+		// java 5 iteradores patron de diseño 
+		
 		for (String cadena:lista) {
 			
 			System.out.println(cadena);
+		}
+		
+		//java 1.
+		Iterator<String> iterador= lista.iterator();
+		
+		while(iterador.hasNext()) {
+			
+			System.out.println(iterador.next());
 		}
 
 	}
