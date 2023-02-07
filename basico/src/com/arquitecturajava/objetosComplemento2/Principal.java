@@ -12,13 +12,12 @@ public class Principal {
 
 	public static void main(String[] args) {
 
+		String fichero="tipoB.txt";
 	
 		try {
-			List<String> lineas = leerLineas();
-			ProcesadorA procesador= new ProcesadorA();
-
+			List<String> lineas = leerLineas(fichero);
+			Procesador procesador= new FactoriaProcesador().getProcesador(fichero.substring(0,5));
 			List<Factura> lista = procesador.procesarLineas(lineas);
-
 			imprimirFacturas(lista);
 
 		} catch (IOException e) {
@@ -29,8 +28,8 @@ public class Principal {
 	}
 
 	
-	private static List<String> leerLineas() throws IOException {
-		Path ruta = Paths.get("tipoA.txt");
+	private static List<String> leerLineas(String fichero) throws IOException {
+		Path ruta = Paths.get(fichero);
 
 		List<String> lineas = Files.readAllLines(ruta, StandardCharsets.UTF_8);
 		return lineas;

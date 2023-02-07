@@ -3,7 +3,7 @@ package com.arquitecturajava.objetosComplemento2;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProcesadorA extends Procesador {
+public class ProcesadorB extends Procesador {
 	
 	@Override
 	public List<Factura> procesarLineas(List<String> lineas) {
@@ -12,8 +12,8 @@ public class ProcesadorA extends Procesador {
 
 		for (String linea : lineas) {
 
-			String[] partes = linea.split(",");
-			Factura f = new Factura(partes[0], partes[1], Double.parseDouble(partes[2]));
+			String[] partes = linea.split("\\|");
+			Factura f = new Factura(partes[2], partes[1], Double.parseDouble(partes[0]));
 			lista.add(f);
 
 		}
