@@ -10,6 +10,7 @@ public class Suelo {
 
 		baldosas.add(baldosa);
 
+		
 	}
 
 	public int numeroBalsosas() {
