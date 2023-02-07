@@ -7,6 +7,7 @@ public abstract class Procesador {
 	public abstract List<Factura> procesarLineas(List<String> lineas);
 
 	public static Procesador getInstancia(String tipo) {
+		
 
 		if (tipo.equals("tipoA")) {
 
