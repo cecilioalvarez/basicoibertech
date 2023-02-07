@@ -12,7 +12,11 @@ public abstract class Socio {
 		this.nombre = nombre;
 	}
 	
-	
+	public Socio(String nombre) {
+		super();
+		this.nombre = nombre;
+	}
+
 	public abstract double cuotaMensual();
 
 }

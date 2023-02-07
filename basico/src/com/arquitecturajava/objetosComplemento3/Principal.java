@@ -7,9 +7,9 @@ public class Principal {
 		
 		Gimnasio g= new Gimnasio();
 		
-		g.addSocio(new SocioVip());
-		g.addSocio(new SocioNormal());
-		g.addSocio(new SocioNiño());
+		g.addSocio(new SocioVip("ana"));
+		g.addSocio(new SocioNormal("david"));
+		g.addSocio(new SocioNiño("juan"));
 		
 		System.out.println(g.ingresosTotales());
 	}
