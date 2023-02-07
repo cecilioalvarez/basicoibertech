@@ -1,0 +1,2 @@
+200|tablet|1
+100|auricular|2

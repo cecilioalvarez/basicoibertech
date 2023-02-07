@@ -1,4 +1,4 @@
-package com.arquitecturajava.objetosComplemento;
+package com.arquitecturajava.objetosComplemento2;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -15,8 +15,9 @@ public class Principal {
 	
 		try {
 			List<String> lineas = leerLineas();
+			ProcesadorA procesador= new ProcesadorA();
 
-			List<Factura> lista = procesarLineas(lineas);
+			List<Factura> lista = procesador.procesarLineas(lineas);
 
 			imprimirFacturas(lista);
 
@@ -27,19 +28,7 @@ public class Principal {
 
 	}
 
-	private static List<Factura> procesarLineas(List<String> lineas) {
-		List<Factura> lista = new ArrayList<Factura>();
-
-		for (String linea : lineas) {
-
-			String[] partes = linea.split(",");
-			Factura f = new Factura(partes[0], partes[1], Double.parseDouble(partes[2]));
-			lista.add(f);
-
-		}
-		return lista;
-	}
-
+	
 	private static List<String> leerLineas() throws IOException {
 		Path ruta = Paths.get("tipoA.txt");
 
