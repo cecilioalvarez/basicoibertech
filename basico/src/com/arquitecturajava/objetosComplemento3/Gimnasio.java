@@ -7,9 +7,22 @@ public class Gimnasio {
 	private ArrayList<Socio> socios= new ArrayList<Socio>();
 
 	
+	public boolean esYaSocio(Socio s) {
+		
+		return socios.contains(s);
+		
+	}
+	
 	public void addSocio(Socio s) {
 		
-		socios.add(s);
+		
+		if (!esYaSocio(s)) {
+			
+			socios.add(s);
+		}
+		
+		
+	
 	}
 	
 	public double ingresosTotales() {
