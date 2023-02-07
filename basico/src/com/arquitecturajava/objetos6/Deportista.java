@@ -15,6 +15,14 @@ public class Deportista extends Persona {
 		// TODO Auto-generated constructor stub
 	}
 
+	
+
+	@Override
+	public void andar() {
+		
+		System.out.println("el deportista anda a 6km/h");
+	}
+
 
 	public void setDeporte(String deporte) {
 		this.deporte = deporte;
