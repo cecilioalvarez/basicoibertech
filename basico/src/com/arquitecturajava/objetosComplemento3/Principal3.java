@@ -13,8 +13,6 @@ public class Principal3 {
 		
 		lista.forEach(Principal3::imprimir);
 		
-		
-
 	}
 	public static void imprimir(String cadena) {
 		
