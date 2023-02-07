@@ -29,6 +29,9 @@ public class Factura {
 		this.concepto = concepto;
 		this.importe = importe;
 	}
+	public Factura() {
+		// TODO Auto-generated constructor stub
+	}
 	
 	
 }

@@ -12,13 +12,14 @@ public class Principal {
 
 	public static void main(String[] args) {
 
-		String fichero="tipoB.txt";
+		String fichero="tipoC.txt";
 	
 		try {
 			List<String> lineas = leerLineas(fichero);
-			Procesador procesador= new FactoriaProcesador().getProcesador(fichero.substring(0,5));
+			Procesador procesador= Procesador.getInstancia(fichero.substring(0,5));
 			List<Factura> lista = procesador.procesarLineas(lineas);
 			imprimirFacturas(lista);
+		
 
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
