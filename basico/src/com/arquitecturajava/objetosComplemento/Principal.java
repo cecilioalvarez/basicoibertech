@@ -22,10 +22,16 @@ public class Principal {
 			for (String linea : lineas) {
 				
 				String[] partes= linea.split(",");
-				System.out.println(partes[0]);
-				System.out.println(partes[1]);
-				System.out.println(partes[2]);
+				Factura f= new Factura(partes[0],partes[1],Double.parseDouble(partes[2]));
+				lista.add(f);
 				
+			}
+			
+			for (Factura f:lista) {
+				
+				System.out.println(f.getNumero());
+				System.out.println(f.getConcepto());
+				System.out.println(f.getImporte());
 			}
 			
 		} catch (IOException e) {
