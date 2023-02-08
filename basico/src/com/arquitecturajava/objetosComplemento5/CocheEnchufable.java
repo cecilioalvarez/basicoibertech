@@ -1,6 +1,6 @@
 package com.arquitecturajava.objetosComplemento5;
 
-public class CocheEnchufable implements VehiculoClasico, VehiculoElectrico {
+public class CocheEnchufable implements VehiculoEnchufable {
 
 	@Override
 	public void cargar() {

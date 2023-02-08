@@ -11,9 +11,11 @@ public class Principal {
 		
 		CocheElectrico ce= new CocheElectrico();
 		
+		ce.cargar();
+		
 		g.cargar(ce);
 		
-		CocheEnchufable cen= new CocheEnchufable();
+		VehiculoEnchufable cen= new CocheEnchufable();
 		
 		g.cargar(cen);
 		g.llenarDeposito(cen);
