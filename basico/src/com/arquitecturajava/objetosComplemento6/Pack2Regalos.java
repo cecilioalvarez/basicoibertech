@@ -27,5 +27,15 @@ public class Pack2Regalos {
 	public double getPrecio() {
 		return regaloA.getPrecio()+ regaloB.getPrecio();
 	}
+	
+	public Regalo getRegaloMasCaro() {
+		
+		if (regaloA.getPrecio()>regaloB.getPrecio()) {
+			
+			return regaloA;
+		}else {
+			return regaloB;
+		}
+	}
 
 }

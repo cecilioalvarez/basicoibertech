@@ -22,6 +22,8 @@ public class Principal {
 		
 		System.out.println(caja.getPrecio());
 
+		System.out.println(caja.esMasCaro().getPrecio());
+		System.out.println(caja.esMasCaro().getNombre());
 	}
 
 }

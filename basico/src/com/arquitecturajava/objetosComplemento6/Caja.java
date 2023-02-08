@@ -36,6 +36,30 @@ public class Caja {
 	}
 	
 	
+	public Regalo esMasCaro() {
+		
+		Regalo regaloPackCaro=null;
+		
+		
+		if (pack1.getRegaloMasCaro().getPrecio()>pack2.getRegaloMasCaro().getPrecio()) {
+			
+			regaloPackCaro=  pack1.getRegaloMasCaro();
+		}else {
+			regaloPackCaro= pack2.getRegaloMasCaro();
+		}
+		
+		if (regaloPackCaro.getPrecio()>regalo.getPrecio()) {
+			
+			return regaloPackCaro;
+		}else {
+			
+			return regalo;
+		}
+		
+	}
+
+	
+	
 	
 	
 }
