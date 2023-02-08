@@ -30,12 +30,7 @@ public class Pack2Regalos {
 	
 	public Regalo getRegaloMasCaro() {
 		
-		if (regaloA.getPrecio()>regaloB.getPrecio()) {
-			
-			return regaloA;
-		}else {
-			return regaloB;
-		}
+		return regaloA.getPrecio()>regaloB.getPrecio()? regaloA:regaloB;
 	}
 
 }

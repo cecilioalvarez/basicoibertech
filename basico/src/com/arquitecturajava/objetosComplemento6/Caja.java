@@ -36,25 +36,17 @@ public class Caja {
 	}
 	
 	
-	public Regalo esMasCaro() {
+	public Regalo getRegaloMasCaro() {
 		
 		Regalo regaloPackCaro=null;
+		Regalo regaloCaroPackA = pack1.getRegaloMasCaro();
+		Regalo regaloCaroPackB = pack1.getRegaloMasCaro();
+		Regalo regaloPacksCaro= regaloCaroPackA.getPrecio()>regaloCaroPackB.getPrecio()? regaloCaroPackA:regaloCaroPackB;
+		return regaloPacksCaro.getPrecio()>regalo.getPrecio()? regaloPacksCaro:regalo;
+				
 		
-		
-		if (pack1.getRegaloMasCaro().getPrecio()>pack2.getRegaloMasCaro().getPrecio()) {
 			
-			regaloPackCaro=  pack1.getRegaloMasCaro();
-		}else {
-			regaloPackCaro= pack2.getRegaloMasCaro();
-		}
-		
-		if (regaloPackCaro.getPrecio()>regalo.getPrecio()) {
-			
-			return regaloPackCaro;
-		}else {
-			
-			return regalo;
-		}
+	
 		
 	}
 
