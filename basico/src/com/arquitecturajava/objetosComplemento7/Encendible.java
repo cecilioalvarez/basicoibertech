@@ -5,5 +5,7 @@ public interface Encendible {
 	void on();
 
 	void off();
+	
+	boolean isEncendida();
 
 }
