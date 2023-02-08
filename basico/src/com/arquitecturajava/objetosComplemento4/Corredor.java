@@ -4,14 +4,14 @@ public class Corredor {
 
 	
 	private String nombre;
-	private Zapatilla zapatilla;
+	private Calzado calzado;
 	private double velocidad;
 	
 	
-	public Corredor(String nombre, Zapatilla zapatilla, double velocidad) {
+	public Corredor(String nombre, Calzado calzado, double velocidad) {
 		super();
 		this.nombre = nombre;
-		this.zapatilla = zapatilla;
+		this.calzado = calzado;
 		this.velocidad = velocidad;
 	}
 	public double getVelocidad() {
@@ -20,11 +20,13 @@ public class Corredor {
 	public void setVelocidad(double velocidad) {
 		this.velocidad = velocidad;
 	}
-	public Zapatilla getZapatilla() {
-		return zapatilla;
+	
+	
+	public Calzado getCalzado() {
+		return calzado;
 	}
-	public void setZapatilla(Zapatilla zapatilla) {
-		this.zapatilla = zapatilla;
+	public void setCalzado(Calzado calzado) {
+		this.calzado = calzado;
 	}
 	public String getNombre() {
 		return nombre;
@@ -34,6 +36,7 @@ public class Corredor {
 	}
 	public void correr() {
 		
-		System.out.println("el corredor corre a 9 km/hora");
+		double velocidadTotal=velocidad+calzado.mejoraVelocidad();
+		System.out.println("el corredor corre :"+velocidadTotal);
 	}
 }

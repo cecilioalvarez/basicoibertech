@@ -1,6 +1,6 @@
 package com.arquitecturajava.objetosComplemento4;
 
-public class Zapatilla {
+public class Zapatilla implements Calzado {
 
 	private String modelo;
 
@@ -12,4 +12,8 @@ public class Zapatilla {
 		this.modelo = modelo;
 	}
 	
+	public double mejoraVelocidad() {
+		
+		return 1;
+	}
 }
