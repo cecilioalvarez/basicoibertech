@@ -33,4 +33,8 @@ public class Pack2Regalos {
 		return regaloA.getPrecio()>regaloB.getPrecio()? regaloA:regaloB;
 	}
 
+	public Pack2Regalos esMasCaro(Pack2Regalos otro) {
+		
+		return this.getPrecio()>otro.getPrecio()?this:otro;
+	}
 }

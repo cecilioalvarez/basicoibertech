@@ -38,9 +38,9 @@ public class Caja {
 	
 	public Regalo getRegaloMasCaro() {
 		
-		Regalo regaloPackCaro=null;
+	
 		Regalo regaloCaroPackA = pack1.getRegaloMasCaro();
-		Regalo regaloCaroPackB = pack1.getRegaloMasCaro();
+		Regalo regaloCaroPackB = pack2.getRegaloMasCaro();
 		Regalo regaloPacksCaro= regaloCaroPackA.getPrecio()>regaloCaroPackB.getPrecio()? regaloCaroPackA:regaloCaroPackB;
 		return regaloPacksCaro.getPrecio()>regalo.getPrecio()? regaloPacksCaro:regalo;
 				
@@ -50,6 +50,11 @@ public class Caja {
 		
 	}
 
+	public Pack2Regalos  packMasCaro() {
+		
+		return pack1.esMasCaro(pack2);
+		
+	}
 	
 	
 	
