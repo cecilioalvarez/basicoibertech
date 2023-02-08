@@ -7,7 +7,6 @@ public class Habitacion implements Encendible {
 
 	private List<Encendible> bombillas = new ArrayList<Encendible>();
 
-	
 	public List<Encendible> getBombillas() {
 		return bombillas;
 	}
@@ -40,8 +39,13 @@ public class Habitacion implements Encendible {
 
 	@Override
 	public boolean isEncendida() {
-		// TODO Auto-generated method stub
-		return false;
+
+		for (Encendible encendible : bombillas) {
+			if (!encendible.isEncendida())
+				return false;
+
+		}
+		return true;
 	}
 
 }

@@ -50,8 +50,13 @@ public class Piso implements Encendible {
 
 	@Override
 	public boolean isEncendida() {
-		// TODO Auto-generated method stub
-		return false;
+		
+		for (Encendible encendible : habitaciones) {
+			if (!encendible.isEncendida())
+				return false;
+
+		}
+		return true;
 	}
 
 }
