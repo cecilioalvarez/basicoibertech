@@ -16,6 +16,11 @@ public class Regalo {
 	public void setPrecio(double precio) {
 		this.precio = precio;
 	}
+	public Regalo(String nombre, double precio) {
+		super();
+		this.nombre = nombre;
+		this.precio = precio;
+	}
 	
 	
 }
