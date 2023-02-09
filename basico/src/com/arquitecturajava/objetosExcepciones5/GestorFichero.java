@@ -1,4 +1,4 @@
-package com.arquitecturajava.objetosExcepciones3;
+package com.arquitecturajava.objetosExcepciones5;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -32,14 +32,16 @@ public class GestorFichero {
 
 		List<String> lineas = new ArrayList<String>();
 		String linea = null;
-		
-		
-		FileInputStream fi = new FileInputStream(ruta);
-		InputStreamReader intstream = new InputStreamReader(fi);
-		BufferedReader buffer = new BufferedReader(intstream);
 
-		while ((linea = buffer.readLine()) != null) {
-			lineas.add(linea);
+		try (FileInputStream fi = new FileInputStream(ruta);
+				InputStreamReader intstream = new InputStreamReader(fi);
+				BufferedReader buffer = new BufferedReader(intstream)) {
+			while ((linea = buffer.readLine()) != null) {
+				lineas.add(linea);
+			}
+		} catch (IOException e) {
+
+			throw e;
 		}
 
 		return lineas;

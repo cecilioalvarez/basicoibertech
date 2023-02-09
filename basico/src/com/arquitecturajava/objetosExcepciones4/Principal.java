@@ -1,4 +1,4 @@
-package com.arquitecturajava.objetosExcepciones3;
+package com.arquitecturajava.objetosExcepciones4;
 
 import java.io.IOException;
 import java.util.List;
