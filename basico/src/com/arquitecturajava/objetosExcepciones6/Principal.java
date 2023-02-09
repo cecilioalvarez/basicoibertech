@@ -2,6 +2,7 @@ package com.arquitecturajava.objetosExcepciones6;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -24,9 +25,21 @@ public class Principal {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 
-				JOptionPane.showMessageDialog(null,
-					    "Fichero",
-					    "Fichero inservado",2);
+				GestorFichero gestor= new GestorFichero("h:/pruebafinal.txt");
+				try {
+					gestor.crearFichero();
+					JOptionPane.showMessageDialog(null,
+						    "Fichero Insertado",
+						    "Fichero ",2);
+					
+				} catch (IOException e1) {
+					
+					JOptionPane.showMessageDialog(null,
+						    e1.toString(),
+						    "Fichero ",2);
+				}
+				
+				
 			}
 
 		});
