@@ -14,7 +14,7 @@ public class Principal3 {
 		
 	
 		try {
-			List<String> lineas = Files.readAllLines(Paths.get("prueba.txt"), StandardCharsets.UTF_8);
+			List<String> lineas = Files.readAllLines(Paths.get("prueba1.txt"), StandardCharsets.UTF_8);
 			for (String linea : lineas) {
 				
 				System.out.println(linea);
@@ -23,11 +23,14 @@ public class Principal3 {
 		} catch (IOException e) {
 			// hemos impreso la excepcion como tal
 			System.out.println(e);
+			throw new RuntimeException("todo peto");
 			
 		}finally {
 			// se ejecuta siempre falle o no el programa
 			System.out.println("cerrando recursos");
 		}
+		
+		System.out.println("el programa finaliza");
 
 	}
 

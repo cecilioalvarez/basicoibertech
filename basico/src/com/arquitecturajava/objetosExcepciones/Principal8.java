@@ -6,10 +6,9 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Principal6 {
+public class Principal8 {
 
 	public static void main(String[] args) {
-
 
 		String linea = "";
 		// bloque try with resources
@@ -21,10 +20,13 @@ public class Principal6 {
 			while ((linea = buffer.readLine())!=null) {
 				System.out.println(linea);
 			}
-		} catch (IOException e) {
+			Class.forName("java.util.ArrayList");
+			
+		} catch (IOException | ClassNotFoundException e) {
 
-			System.out.println("hay un error de java io" + e);
+			System.out.println("hay un error de java " + e);
 		}
+		System.out.println("el programa finaliza");
 
 	}
 
