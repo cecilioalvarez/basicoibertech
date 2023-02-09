@@ -32,7 +32,7 @@ public class GestorFichero {
 		File fichero = new File(ruta);
 
 	    //try with resources
-		try (GestorCorreo gestor= new GestorCorreo()){
+		try (GestorCorreo gestor=gestorCorreo;){
 			fichero.createNewFile();
 			gestor.enviarCorreo();
 			
