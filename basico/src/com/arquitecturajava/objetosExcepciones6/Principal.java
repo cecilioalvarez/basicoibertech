@@ -1,7 +1,9 @@
 package com.arquitecturajava.objetosExcepciones6;
 
-import java.io.IOException;
-import java.util.List;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
@@ -13,9 +15,23 @@ public class Principal {
 		JLabel label = null;
 		frame = new JFrame("crear fichero");
 		frame.setSize(200, 200);
-		label = new JLabel("hola desde java");
-		frame.getContentPane().add(label);
+		JButton button = new JButton("Click Me!");
+		frame.getContentPane().add(button);
+		
+		button.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+
+			}
+
+		});
+
 		frame.setVisible(true);
+
+	}
+
+	public void actionPerformed(ActionEvent e) {
 
 	}
 
