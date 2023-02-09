@@ -9,10 +9,11 @@ public class Principal {
 
 	public static void main(String[] args) {
 
-		GestorFichero gestor = new GestorFichero("prueba.txt");
+		GestorFichero gestor = new GestorFichero("prueba1.txt");
 
 		List<String> lineas = gestor.leerLineas();
 		String totalTexto="";
+		
 		for (String linea : lineas) {
 
 			totalTexto+=linea;
@@ -23,7 +24,6 @@ public class Principal {
 		frame.setSize(200, 200);
 		JLabel label = new JLabel(totalTexto);
 		frame.getContentPane().add(label);
-		frame.pack();
 		frame.setVisible(true);
 
 	}
