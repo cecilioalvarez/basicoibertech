@@ -4,10 +4,6 @@ public class PrincipalTarea2 {
 
 	public static void main(String[] args) {
 		
-		
-		
-		
-		
 		try (GestorTarea tarea= new GestorTarea();){
 			
 			

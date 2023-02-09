@@ -14,7 +14,7 @@ public class Principal {
 		
 	
 		try {
-			List<String> lineas = Files.readAllLines(Paths.get("prueba1.txt"), StandardCharsets.UTF_8);
+			List<String> lineas = Files.readAllLines(Paths.get("prueba.txt"), StandardCharsets.UTF_8);
 			for (String linea : lineas) {
 				
 				System.out.println(linea);

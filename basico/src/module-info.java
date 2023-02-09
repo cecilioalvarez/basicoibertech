@@ -6,4 +6,5 @@
  *
  */
 module basico {
+	requires java.desktop; 
 }
