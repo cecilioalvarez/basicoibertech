@@ -12,7 +12,7 @@ public class Principal3 {
 	public static void main(String[] args) {
 		
 		
-		File fichero= new File("prueba.txt");
+	
 		try {
 			List<String> lineas = Files.readAllLines(Paths.get("prueba.txt"), StandardCharsets.UTF_8);
 			for (String linea : lineas) {

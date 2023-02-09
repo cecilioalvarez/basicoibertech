@@ -6,7 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Principal6 {
+public class Principal7 {
 
 	public static void main(String[] args) {
 
@@ -20,10 +20,16 @@ public class Principal6 {
 			while ((linea = buffer.readLine())!=null) {
 				System.out.println(linea);
 			}
+			Class.forName("java.util.ArrayList");
+			
 		} catch (IOException e) {
 
 			System.out.println("hay un error de java io" + e);
+		} catch (ClassNotFoundException e) {
+			
+			System.out.println("la clase no se ha encontrado");
 		}
+		System.out.println("el programa finaliza");
 
 	}
 
