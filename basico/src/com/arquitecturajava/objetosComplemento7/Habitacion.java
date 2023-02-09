@@ -5,20 +5,20 @@ import java.util.List;
 
 public class Habitacion implements Encendible {
 
-	private List<Encendible> bombillas = new ArrayList<Encendible>();
+	private List<Encendible> encendibles = new ArrayList<Encendible>();
 
 	public List<Encendible> getBombillas() {
-		return bombillas;
+		return encendibles;
 	}
 
 	public void setBombillas(List<Encendible> bombillas) {
-		this.bombillas = bombillas;
+		this.encendibles = bombillas;
 	}
 
 	@Override
 	public void on() {
 
-		for (Encendible encendible : bombillas) {
+		for (Encendible encendible : encendibles) {
 
 			encendible.on();
 		}
@@ -26,12 +26,12 @@ public class Habitacion implements Encendible {
 	}
 
 	public boolean add(Encendible e) {
-		return bombillas.add(e);
+		return encendibles.add(e);
 	}
 
 	@Override
 	public void off() {
-		for (Encendible encendible : bombillas) {
+		for (Encendible encendible : encendibles) {
 			encendible.off();
 		}
 
@@ -40,7 +40,7 @@ public class Habitacion implements Encendible {
 	@Override
 	public boolean isEncendida() {
 
-		for (Encendible encendible : bombillas) {
+		for (Encendible encendible : encendibles) {
 			if (!encendible.isEncendida())
 				return false;
 
