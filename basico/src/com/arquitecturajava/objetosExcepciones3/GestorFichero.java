@@ -1,6 +1,9 @@
 package com.arquitecturajava.objetosExcepciones3;
 
+import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -24,11 +27,20 @@ public class GestorFichero {
 		this.ruta = ruta;
 	}
 
+	// dejamos a la excepcion fluir
 	public List<String> leerLineas() throws IOException {
 
 		List<String> lineas = new ArrayList<String>();
+		String linea = null;
+		
+		
+		FileInputStream fi = new FileInputStream(ruta);
+		InputStreamReader intstream = new InputStreamReader(fi);
+		BufferedReader buffer = new BufferedReader(intstream);
 
-		lineas = Files.readAllLines(Paths.get(ruta), StandardCharsets.UTF_8);
+		while ((linea = buffer.readLine()) != null) {
+			lineas.add(linea);
+		}
 
 		return lineas;
 	}

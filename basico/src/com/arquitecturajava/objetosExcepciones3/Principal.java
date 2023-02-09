@@ -10,7 +10,7 @@ public class Principal {
 
 	public static void main(String[] args) {
 
-		GestorFichero gestor = new GestorFichero("prueba1.txt");
+		GestorFichero gestor = new GestorFichero("prueba.txt");
 		
 		String totalTexto="";
 		List<String> lineas;
