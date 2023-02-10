@@ -1,0 +1,37 @@
+2023-02-10 09:23:35,666 entramos en crear fichero
+2023-02-10 09:23:35,667 java.io.IOException: No such file or directory
+2023-02-10 09:34:44,869 entramos en crear fichero
+2023-02-10 09:34:44,870 salimos de crear fichero
+2023-02-10 09:38:49,669 la variable ruta valepruebafinal.txt
+2023-02-10 09:38:49,670 entramos en crear fichero
+2023-02-10 09:38:49,670 la ruta esta vacia
+2023-02-10 09:38:49,670 el gestor de correo no esta bien
+2023-02-10 09:38:49,670 salimos de crear fichero
+2023-02-10 09:39:10,581 la variable ruta valeh:/pruebafinal.txt
+2023-02-10 09:39:10,582 entramos en crear fichero
+2023-02-10 09:39:10,582 la ruta esta vacia
+2023-02-10 09:39:10,582 java.io.IOException: No such file or directory
+2023-02-10 09:40:59,036 la variable ruta valeh:/pruebafinal.txt
+2023-02-10 09:40:59,037 entramos en crear fichero
+2023-02-10 09:40:59,037 la ruta esta vacia
+2023-02-10 09:40:59,037 java.io.IOException: No such file or directory
+2023-02-10 09:41:37,786 la variable ruta valeh:/pruebafinal.txt
+2023-02-10 09:41:37,787 entramos en crear fichero
+2023-02-10 09:41:37,787 la ruta esta vacia
+2023-02-10 09:41:37,787 java.io.IOException: No such file or directory
+2023-02-10 09:42:07,183 la variable ruta valeh:/pruebafinal.txt
+2023-02-10 09:42:07,184 entramos en crear fichero
+2023-02-10 09:42:07,184 la ruta esta vacia
+2023-02-10 09:42:07,184 java.io.IOException: No such file or directory
+2023-02-10 09:42:33,843 la variable ruta valeh:/pruebafinal.txt
+2023-02-10 09:42:33,845 entramos en crear fichero
+2023-02-10 09:42:33,845 la ruta esta vacia
+2023-02-10 09:42:33,845 java.io.IOException: No such file or directory
+2023-02-10 09:43:41,740 la variable ruta valeh:/pruebafinal.txt
+2023-02-10 09:43:41,742 entramos en crear fichero
+2023-02-10 09:43:41,742 la ruta esta vacia
+2023-02-10 09:43:41,742 java.io.IOException: No such file or directory
+2023-02-10 09:44:10,312 la variable ruta valeh:/pruebafinal.txt
+2023-02-10 09:44:10,313 entramos en crear fichero
+2023-02-10 09:44:10,313 la ruta esta vacia
+2023-02-10 09:44:10,313 java.io.IOException: No such file or directory

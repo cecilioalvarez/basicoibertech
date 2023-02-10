@@ -36,7 +36,9 @@ public class GestorFichero {
 	public void crearFichero() {
 
 		File fichero = new File(ruta);
+		logger.debug("la variable ruta vale"+ ruta);
 		logger.info("entramos en crear fichero");
+		logger.warn("la ruta esta vacia");
 		// try with resources
 		try (GestorCorreo gestor = gestorCorreo;) {
 			fichero.createNewFile();
@@ -47,7 +49,7 @@ public class GestorFichero {
 			logger.error(e);
 			throw new GestorException("el gestor no funciona", e);
 		}
-		
+		logger.warn("el gestor de correo no esta bien");
 		logger.info("salimos de crear fichero");
 
 	}

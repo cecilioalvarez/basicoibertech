@@ -2,7 +2,7 @@
 <Configuration status="ERROR">
     <Appenders>
         <Console name="consola" target="SYSTEM_OUT">
-            <PatternLayout pattern="%m %n"/>
+            <PatternLayout pattern=" %d %p %c  linea : %L %m %n"/>
         </Console>
         
         <File name="fichero" fileName="logs/app.log">
