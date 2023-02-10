@@ -4,11 +4,19 @@
         <Console name="consola" target="SYSTEM_OUT">
             <PatternLayout pattern="%m %n"/>
         </Console>
+        
+        <File name="fichero" fileName="logs/app.log">
+            <PatternLayout>
+                <Pattern>%d %m%n</Pattern>
+            </PatternLayout>
+        </File>
+        
     </Appenders>
     <Loggers>
 		<!-- avoid duplicated logs with additivity=false -->
         <Logger name="com.arquitecturajava" level="debug" additivity="false">
             <AppenderRef ref="consola"/>
+             <AppenderRef ref="fichero"/>
         </Logger>
     </Loggers>
 </Configuration>
