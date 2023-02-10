@@ -5,33 +5,57 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.util.ArrayList;
 import java.util.List;
 
+
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class GrupoNotasTest {
 
+	// FIRST (Fast ,Independiente,Repetible, Chequeo propio, Atemporal)
+	
+	
+	List<Nota> notasBasicasTest=null;
+	
+	@BeforeEach
+	void setUp() {
+		
+		
+		notasBasicasTest= new ArrayList<Nota>();
+		notasBasicasTest.add(new Nota(5.2));
+		notasBasicasTest.add(new Nota(4.3));
+		notasBasicasTest.add(new Nota(3.2));
+		notasBasicasTest.add(new Nota(4.2));
+		
+		notasBasicasTest.add(new Nota(3.2));
+		notasBasicasTest.add(new Nota(4.2));
+		
+		
+		
+	}
 	
 	@Test
 	void añadir_nota_al_grupo_notas_test() {
 		
-		List<Nota> notas= new ArrayList<Nota>();
-		GrupoNotas grupo= new GrupoNotas(notas);
+		
+		GrupoNotas grupo= new GrupoNotas(notasBasicasTest);
 		grupo.add(new Nota(4));
-		assertEquals(1, grupo.getNotas().size());
+		assertTrue(grupo.getNotas().contains(new Nota(4)));
 		
 		
 	}
 	
 	@Test
 	void calcular_nota_media_grupo_notas() {
+
+		///self-checking
 		
+		double mediaEsperada=4.23;
 		List<Nota> notas= new ArrayList<Nota>();
 		notas.add(new Nota(5.2));
 		notas.add(new Nota(4.3));
 		notas.add(new Nota(3.2));
-		double mediaEsperada=4.23;
+		
 		GrupoNotas grupo= new GrupoNotas(notas);
-		
-		
 		double mediaCalculada=grupo.notaMedia();
 		
 		
@@ -43,15 +67,16 @@ class GrupoNotasTest {
 	@Test
 	void eliminar_nota_del_grupo_notas() {
 		
-		List<Nota> notas= new ArrayList<Nota>();
-		notas.add(new Nota(4.5));
-		notas.add(new Nota(5.2));
-		notas.add(new Nota(3.2));
+		notasBasicasTest.add(new Nota(7.2));
+		GrupoNotas grupo= new GrupoNotas(notasBasicasTest);
 		
-		GrupoNotas grupo= new GrupoNotas(notas);
+		//act
+		boolean contieneNuevaNota=grupo.getNotas().contains(new Nota(7.2));
+		grupo.remove(new Nota(7.2));
+		boolean noContieneNuevaNota=grupo.getNotas().contains(new Nota(7.2));
 		
-		grupo.remove(new Nota(4.5));
-		assertEquals(2, grupo.getNotas().size());
+		assertTrue(contieneNuevaNota);
+		assertFalse(noContieneNuevaNota);
 		
 		
 	}
