@@ -35,7 +35,7 @@ class GrupoNotasTest {
 		double mediaCalculada=grupo.notaMedia();
 		
 		
-		assertEquals(mediaEsperada,mediaCalculada,0.2);
+		assertEquals(mediaEsperada,mediaCalculada,0.1);
 		
 		
 	}
