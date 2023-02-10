@@ -30,5 +30,26 @@ class NotaTest {
 		assertFalse(aprobada);
 		
 	}
+	
+	@Test
+	void nota_igualdad_con_nota_por_valor_test() {
+		//arrangue
+		
+		Nota nota1= new Nota(4);
+		Nota nota2= new Nota(4);
+		Nota nota3= new Nota (7);
+		
+		boolean nota1IgualNota2= nota1.equals(nota2);
+		
+		boolean nota1IgualNota3= nota1.equals(nota3);
+		
+		assertTrue(nota1IgualNota2);
+		assertFalse(nota1IgualNota3);
+		
+		
+		
+		
+		
+	}
 
 }
