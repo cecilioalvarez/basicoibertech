@@ -73,10 +73,10 @@ class GrupoNotasTest {
 		//act
 		boolean contieneNuevaNota=grupo.getNotas().contains(new Nota(7.2));
 		grupo.remove(new Nota(7.2));
-		boolean noContieneNuevaNota=grupo.getNotas().contains(new Nota(7.2));
+		boolean todavidaContieneNuevaNota=grupo.getNotas().contains(new Nota(7.2));
 		
 		assertTrue(contieneNuevaNota);
-		assertFalse(noContieneNuevaNota);
+		assertFalse(todavidaContieneNuevaNota);
 		
 		
 	}
