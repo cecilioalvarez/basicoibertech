@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="ERROR">
+    <Appenders>
+        <Console name="consola" target="SYSTEM_OUT">
+            <PatternLayout pattern="%m %n"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+		<!-- avoid duplicated logs with additivity=false -->
+        <Logger name="com.arquitecturajava" level="debug">
+            <AppenderRef ref="consola"/>
+        </Logger>
+    </Loggers>
+</Configuration>
