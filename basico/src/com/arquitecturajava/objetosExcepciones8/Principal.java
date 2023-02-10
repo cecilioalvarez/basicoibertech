@@ -1,4 +1,4 @@
-package com.arquitecturajava.objetosExcepciones7;
+package com.arquitecturajava.objetosExcepciones8;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -25,14 +25,14 @@ public class Principal {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 
-				SuperGestorFichero gestor= new SuperGestorFichero("h:/pruebafinal.txt", new GestorCorreo());
+				GestorFichero gestor= new GestorFichero("h:/pruebafinal.txt", new GestorCorreo());
 				try {
 					gestor.crearFichero();
 					JOptionPane.showMessageDialog(null,
 						    "Fichero Insertado",
 						    "Fichero ",2);
 					
-				} catch (RuntimeException e1) {
+				} catch (IOException e1) {
 					
 					JOptionPane.showMessageDialog(null,
 						    e1.toString(),

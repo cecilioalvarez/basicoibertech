@@ -1,4 +1,4 @@
-package com.arquitecturajava.objetosExcepciones7;
+package com.arquitecturajava.objetosExcepciones8;
 
 import java.io.File;
 import java.io.IOException;
@@ -27,8 +27,7 @@ public class GestorFichero {
 		this.ruta = ruta;
 	}
 
-	// que gestione una excepcion de tipo runtime
-	public void crearFichero() {
+	public void crearFichero() throws IOException {
 
 		File fichero = new File(ruta);
 
@@ -40,7 +39,7 @@ public class GestorFichero {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			throw new RuntimeException("el gestor no funciona",e);
+			throw new IOException("el gestor no funciona",e);
 		}
 
 	}
