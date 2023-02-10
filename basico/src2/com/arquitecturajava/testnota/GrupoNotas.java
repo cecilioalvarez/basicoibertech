@@ -34,5 +34,16 @@ public class GrupoNotas {
 		this.notas = notas;
 	}
 	
+	public double notaMedia() {
+		
+		double total=0;
+		
+		for (Nota n: notas) {
+			
+			total+= n.getValor();
+		}
+		return total/notas.size();
+	}
+	
 	
 }
