@@ -44,7 +44,7 @@ public class GestorFichero {
 
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			logger.error(e.getMessage());
+			logger.error(e);
 			throw new GestorException("el gestor no funciona", e);
 		}
 		

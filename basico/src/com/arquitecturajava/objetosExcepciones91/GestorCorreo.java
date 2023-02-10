@@ -9,6 +9,6 @@ public class GestorCorreo implements AutoCloseable {
 	}
 	public void close() {
 		
-		System.out.println("cerrando la conexion smtp");
+		//System.out.println("cerrando la conexion smtp");
 	}
 }

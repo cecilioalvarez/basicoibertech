@@ -7,7 +7,7 @@
     </Appenders>
     <Loggers>
 		<!-- avoid duplicated logs with additivity=false -->
-        <Logger name="com.arquitecturajava" level="debug">
+        <Logger name="com.arquitecturajava" level="debug" additivity="false">
             <AppenderRef ref="consola"/>
         </Logger>
     </Loggers>
