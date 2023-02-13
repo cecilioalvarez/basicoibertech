@@ -1,10 +1,30 @@
 package com.arquitecturajava.testnota3;
 
+import java.util.Objects;
+
 public class Azulejo {
 
 	private double lado;
 	private double peso;
+	
+	
 
+	@Override
+	public int hashCode() {
+		return Objects.hash(lado, peso);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Azulejo other = (Azulejo) obj;
+		return Double.doubleToLongBits(lado) == Double.doubleToLongBits(other.lado)
+				&& Double.doubleToLongBits(peso) == Double.doubleToLongBits(other.peso);
+	}
 	public double getPeso() {
 		return peso;
 	}

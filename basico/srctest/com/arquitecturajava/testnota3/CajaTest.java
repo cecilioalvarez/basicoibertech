@@ -28,17 +28,55 @@ class CajaTest {
 		
 		//arrange
 		Caja caja= new Caja(1, new ArrayList<Azulejo>());
+		Azulejo nuevoAzulejo= new Azulejo(2);
 		
 		//act 
-		Azulejo azulejo= new Azulejo(2);
-		caja.addAzulejo(azulejo);
-		
+		caja.addAzulejo(nuevoAzulejo);
+	
 		//assert
 		
-		assertTrue(caja.getAzulejos().contains(azulejo));
+		assertTrue(caja.getAzulejos().contains(nuevoAzulejo));
 		
 		
 		
 	}
+	
+	
+	@Test
+	void remove_azulejo_caja() {
+		
+		//arrange
+		List<Azulejo> listaAzulejos= new ArrayList<Azulejo>();
+		Azulejo azulejoEliminar= new Azulejo(3);
+		listaAzulejos.add(azulejoEliminar);
+		Caja caja= new Caja(1, listaAzulejos);
+		
+		//act
+		boolean estabaContenido=caja.getAzulejos().contains(azulejoEliminar);
+		caja.removeAzulejo(azulejoEliminar);
+	
+		//assert
+		assertTrue(estabaContenido);
+		assertFalse(caja.getAzulejos().contains(azulejoEliminar));
+		
+		
+		
+	}
+	
+	@Test
+	void add_azulejo_caja2() {
+		
+		//arrange
+		Caja caja= new Caja(1, new ArrayList<Azulejo>());
+		
+		//act
+		caja.addAzulejo(new Azulejo(2));
+		
+		//assert
+		
+		assertTrue(caja.getAzulejos().contains(new Azulejo(2)));
+		
+	}
+	
 
 }

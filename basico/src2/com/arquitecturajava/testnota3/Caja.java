@@ -44,5 +44,11 @@ public class Caja {
 		
 		
 	}
+	public void removeAzulejo(Azulejo azulejoEliminar) {
+		
+		
+		azulejos.remove(azulejoEliminar);
+		
+	}
 
 }
