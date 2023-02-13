@@ -23,6 +23,10 @@ public class Caja {
 	}
 
 
+	public void addAzulejo(Azulejo azulejo) {
+		
+		this.azulejos.add(azulejo);
+	}
 
 	public Caja(double peso, List<Azulejo> azulejos) {
 		this.azulejos=azulejos;
