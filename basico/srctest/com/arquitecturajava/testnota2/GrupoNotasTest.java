@@ -81,5 +81,21 @@ class GrupoNotasTest {
 	}
 	
 	
+	@Test
+	void obtener_nota_mayor_test() {
+		
+		
+		//arrange
+		GrupoNotas grupo= new GrupoNotas(List.of(new Nota(3),new Nota(6),new Nota(9.2)));
+		
+		//act 
+		Nota notaMayor=grupo.notaMayor();
+		
+		//assert
+		assertEquals(new Nota(9.2),notaMayor);
+		
+	}
+	
+	
 
 }

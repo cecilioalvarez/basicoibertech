@@ -5,10 +5,8 @@ import java.util.List;
 
 public class GrupoNotas {
 
-	
-	private List<Nota> notas= new ArrayList<>();
+	private List<Nota> notas = new ArrayList<>();
 
-	
 	public GrupoNotas() {
 		super();
 	}
@@ -33,17 +31,30 @@ public class GrupoNotas {
 	public void setNotas(List<Nota> notas) {
 		this.notas = notas;
 	}
-	
+
 	public double notaMedia() {
-		
-		double total=0;
-		
-		for (Nota n: notas) {
-			
-			total+= n.getValor();
+
+		double total = 0;
+
+		for (Nota n : notas) {
+
+			total += n.getValor();
 		}
-		return total/notas.size();
+		return total / notas.size();
 	}
-	
-	
+
+	public Nota notaMayor() {
+
+		Nota notaMayor = notas.get(0);
+
+		for (Nota nota : notas) {
+
+			if (nota.compareTo(notaMayor) == 1) {
+
+				notaMayor = nota;
+			}
+		}
+		return notaMayor;
+	}
+
 }
