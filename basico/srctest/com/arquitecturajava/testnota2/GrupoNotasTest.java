@@ -1,4 +1,4 @@
-package com.arquitecturajava.testnota;
+package com.arquitecturajava.testnota2;
 
 import static org.junit.jupiter.api.Assertions.*;
 
