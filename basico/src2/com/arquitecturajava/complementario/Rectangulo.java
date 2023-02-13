@@ -6,7 +6,7 @@ public class Rectangulo {
 	private int lado2;
 	//una instancia de una claes
 	// a un objeto que tenemos creado
-	private static int contador=0;
+	private static  int contador=0;
 	
 	public Rectangulo(int lado1, int lado2) {
 		super();
@@ -33,16 +33,19 @@ public class Rectangulo {
 		this.lado2 = lado2;
 	}
 	
-	public double area() {
-		
-		return lado1*lado2;
-	}
 	
 	public double perimetro() {
 		
 		return lado1*2+ lado2*2;
 	}
 	
+	//poo este es mas sencillo y hace lo mismo
+	//sino que es mas natural con la programacion oo
+	public double area() {
+		
+		return Rectangulo.area(this.getLado1(), this.getLado2());
+	}
+	// este es mas flexible
 	public static double area(double lado1 , double lado2) {
 		
 		return lado1*lado2;
