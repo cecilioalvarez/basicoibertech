@@ -86,10 +86,13 @@ class GrupoNotasTest {
 		
 		
 		//arrange
-		GrupoNotas grupo= new GrupoNotas(List.of(new Nota(3),new Nota(6),new Nota(9.2)));
+	
+		
+		List<Nota> notasAEvaluar=List.of(new Nota(3),new Nota(6),new Nota(9.2));		
+		GrupoNotas grupoNotas= new GrupoNotas(notasAEvaluar);
 		
 		//act 
-		Nota notaMayor=grupo.notaMayor();
+		Nota notaMayor=grupoNotas.notaMayor();
 		
 		//assert
 		assertEquals(new Nota(9.2),notaMayor);
