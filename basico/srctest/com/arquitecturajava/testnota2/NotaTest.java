@@ -53,6 +53,38 @@ class NotaTest {
 	}
 	
 	
+	@Test
+	void nota_mayor_que_otra_nota_test() {
+		//arrangue
+		
+		Nota notaMenor= new Nota(4);
+		Nota notaMayor= new Nota(5);
+	
+		assertEquals(1,notaMayor.compareTo(notaMenor));	
+	}
+	
+	@Test
+	void nota_menor_que_otra_nota_test() {
+		//arrangue
+		
+		Nota notaMenor= new Nota(4);
+		Nota notaMayor= new Nota(5);
+	
+		assertEquals(-1,notaMenor.compareTo(notaMayor));	
+	}
+	
+	
+	@Test
+	void nota_igual_que_otra_nota_comparable_test() {
+		//arrangue
+		
+		Nota notaMenor= new Nota(4);
+		Nota notaMayor= new Nota(4);
+	
+		assertEquals(0,notaMenor.compareTo(notaMayor));	
+	}
+	
+	
 	
 	
 
