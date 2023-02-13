@@ -1,6 +1,6 @@
 package com.arquitecturajava.objetosExcepciones;
 
-public class Avioneta implements Facturable {
+public class RegaloVIP implements Facturable {
 
 	@Override
 	public double importeTotal() {
