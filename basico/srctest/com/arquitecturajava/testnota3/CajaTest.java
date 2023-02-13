@@ -21,6 +21,20 @@ class CajaTest {
 		//assert
 		assertEquals(3,totalPeso);
 	}
+	
+	
+	@Test
+	void inializacion_tamaño_azulejos_10_test() {
+		
+		//arrange
+		Caja c= new Caja(1, List.of(new Azulejo(2), new Azulejo(3)));
+		
+		//act
+		int numeroAzulejosIniciales=c.getTope();
+		
+		//assert
+		assertEquals(10,numeroAzulejosIniciales);
+	}
 
 	
 	@Test

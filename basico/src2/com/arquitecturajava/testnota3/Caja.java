@@ -7,6 +7,11 @@ public class Caja {
 	
 	private double peso;
 	private List<Azulejo> azulejos= new ArrayList<Azulejo>();
+	private int tope;
+	
+	public int getTope() {
+		return tope;
+	}
 	
 	public double getPeso() {
 		return peso;
@@ -25,12 +30,23 @@ public class Caja {
 
 	public void addAzulejo(Azulejo azulejo) {
 		
+		if (this.azulejos.size()==tope) 
+			throw new IllegalArgumentException("tamaño excedido");
+		
 		this.azulejos.add(azulejo);
 	}
 
 	public Caja(double peso, List<Azulejo> azulejos) {
 		this.azulejos=azulejos;
 		this.peso=peso;
+		this.tope=10;
+	}
+	
+	public Caja(double peso, List<Azulejo> azulejos, int tope) {
+		super();
+		this.peso = peso;
+		this.azulejos = azulejos;
+		this.tope = tope;
 	}
 	public double calcularPesoTotal() {
 		
