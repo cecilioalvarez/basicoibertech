@@ -5,7 +5,10 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import com.arquitecturajava.testnota2.Nota;
 
 class CajaTest {
 
@@ -34,6 +37,49 @@ class CajaTest {
 		
 		//assert
 		assertEquals(10,numeroAzulejosIniciales);
+	}
+	
+	@Test
+	void lanza_excepcion_al_añadir_azulejo_test() {
+		
+		//arrange
+		List<Azulejo> azulejos= new ArrayList<Azulejo>();
+		azulejos.add(new Azulejo(2));
+		azulejos.add(new Azulejo(3));
+		
+		Caja caja= new Caja(1, azulejos,2);
+		
+		RuntimeException excepcion = 
+				Assertions.assertThrows(IllegalArgumentException.class, () -> {
+				caja.addAzulejo(new Azulejo(4));
+		});
+	}
+	
+	
+	
+	@Test
+	void lanza_excepcion_al_añadir_azulejos_por_defecto_al_tope_10_test() {
+		
+		//arrange
+		List<Azulejo> azulejos= new ArrayList<Azulejo>();
+		addAzulejo(azulejos,2);
+		addAzulejo(azulejos,2);
+		addAzulejo(azulejos,2);
+		addAzulejo(azulejos,2);
+		addAzulejo(azulejos,2);
+		addAzulejo(azulejos,2);
+		addAzulejo(azulejos,2);
+		addAzulejo(azulejos,2);
+		addAzulejo(azulejos,2);
+		
+		
+		
+		Caja caja= new Caja(1, azulejos);
+		
+		RuntimeException excepcion = 
+				Assertions.assertThrows(IllegalArgumentException.class, () -> {
+				caja.addAzulejo(new Azulejo(4));
+		});
 	}
 
 	
@@ -90,6 +136,11 @@ class CajaTest {
 		
 		assertTrue(caja.getAzulejos().contains(new Azulejo(2)));
 		
+	}
+	
+	private  static void addAzulejo(List<Azulejo> lista, double lado) {
+		
+		lista.add(new Azulejo(lado));
 	}
 	
 
