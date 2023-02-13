@@ -1,5 +1,7 @@
 package com.arquitecturajava.complementario;
 
+import java.util.Objects;
+
 public class Rectangulo {
 
 	private int lado1;
@@ -50,5 +52,23 @@ public class Rectangulo {
 		
 		return lado1*lado2;
 	}
+	
+	@Override
+	public int hashCode() {
+		return Objects.hash(lado1, lado2);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Rectangulo other = (Rectangulo) obj;
+		return lado1 == other.lado1 && lado2 == other.lado2;
+	}
+	
+	
 	
 }
