@@ -11,12 +11,17 @@ public class Nota implements Comparable<Nota> {
 	}
 
 	public void setValor(double valor) {
+		
+		if (valor>10 || valor<0) {
+			
+			throw new IllegalArgumentException("la nota no tiene un valor valido");
+		}
 		this.valor = valor;
 	}
 
 	public Nota(double valor) {
 		super();
-		this.valor = valor;
+		setValor(valor);
 	}
 
 	public boolean estaAprobada() {
