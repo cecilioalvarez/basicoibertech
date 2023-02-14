@@ -5,7 +5,6 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 public class GestorPaises {
 
@@ -24,48 +23,46 @@ public class GestorPaises {
 		}
 
 	}
-	
+
 	public List<Ciudad> getCiudadesDePais(Pais p) {
-		
+
 		return paisesCiudades.get(p);
 	}
-	
-	
+
 	public Ciudad getCiudadMasHabitantes(Pais p) {
-		
-		
-		List<Ciudad> ciudades =paisesCiudades.get(p);
-		
-		Ciudad inicial= ciudades.get(0);
-		inicial = masHabitantes(ciudades, inicial);
+
+		List<Ciudad> ciudades = paisesCiudades.get(p);
+
+		Ciudad inicial = ciudades.get(0);
+		inicial = masHabitantes(ciudades);
 		return inicial;
 	}
 
-	private Ciudad masHabitantes(List<Ciudad> ciudades, Ciudad inicial) {
-		for (Ciudad ciudad: ciudades) {
-		
-			if (inicial.getHabitantes()<ciudad.getHabitantes()) {
-				
-				inicial=ciudad;
+	public Ciudad gestCiudadMasGrandeDelMundo() {
+
+		List<Ciudad> lista = new ArrayList<Ciudad>();
+
+		Collection<List<Ciudad>> coleccion = paisesCiudades.values();
+
+		for (List<Ciudad> listaCiudades : coleccion) {
+
+			lista.addAll(listaCiudades);
+
+		}
+
+		return masHabitantes(lista);
+
+	}
+
+	private Ciudad masHabitantes(List<Ciudad> ciudades) {
+		Ciudad inicial = ciudades.get(0);
+		for (Ciudad ciudad : ciudades) {
+
+			if (inicial.getHabitantes() < ciudad.getHabitantes()) {
+
+				inicial = ciudad;
 			}
 		}
 		return inicial;
 	}
-	
-	public Ciudad gestCiudadMasGrandeDelMundo() {
-		
-		List<Ciudad> lista= new ArrayList<Ciudad>();
-		
-		Collection<List<Ciudad>> coleccion= paisesCiudades.values();
-		
-		for (List<Ciudad> listaCiudades: coleccion) {
-			
-			lista.addAll(listaCiudades);
-			
-		}
-		
-		return masHabitantes(lista, lista.get(0));
-		
-	}
-
 }
