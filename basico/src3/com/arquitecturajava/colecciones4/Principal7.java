@@ -30,13 +30,12 @@ public class Principal7 {
 	
 	
 		
-		Set<Persona> claves=mapa.keySet();
+		Set<Persona> personas=mapa.keySet();
 		
-		for (Persona clave:claves) {
-			
-			System.out.println(mapa.get(clave).getDni());
-			System.out.println(clave.getNombre());
-			System.out.println(mapa.get(clave).getEnfermedad());
+		for (Persona persona:personas) {
+			System.out.println(persona.getNombre());
+			System.out.println(mapa.get(persona).getDni());
+			System.out.println(mapa.get(persona).getEnfermedad());
 			
 			
 		}
