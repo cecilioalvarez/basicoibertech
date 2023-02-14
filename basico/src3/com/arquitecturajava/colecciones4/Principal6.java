@@ -3,14 +3,13 @@ package com.arquitecturajava.colecciones4;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
-import java.util.TreeMap;
 
 public class Principal6 {
 
 	public static void main(String[] args) {
 		
 		//clave valor
-		Map<String,Persona> mapa= new TreeMap<String,Persona>();
+		Map<String,Persona> mapa= new HashMap<String,Persona>();
 		Persona p1= new Persona("1","pepe",20);
 		Persona p2= new Persona("2","ana",30);
 		Persona p3= new Persona("3","miguel",40);
