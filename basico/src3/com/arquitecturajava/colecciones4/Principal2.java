@@ -9,7 +9,7 @@ public class Principal2 {
 
 	public static void main(String[] args) {
 		
-		Set<Examen> conjunto= new TreeSet<Examen>();
+		Set<Examen> conjunto= new TreeSet<Examen>(new ExamenNombreComprator());
 		
 		Examen e1= new Examen("pedro",LocalDate.now(),"matematicas",7);
 		Examen e2= new Examen("juan",LocalDate.now(),"matematicas",8);
