@@ -1,9 +1,11 @@
 package com.arquitecturajava.colecciones4;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class GestorPaises {
 
@@ -35,6 +37,11 @@ public class GestorPaises {
 		List<Ciudad> ciudades =paisesCiudades.get(p);
 		
 		Ciudad inicial= ciudades.get(0);
+		inicial = masHabitantes(ciudades, inicial);
+		return inicial;
+	}
+
+	private Ciudad masHabitantes(List<Ciudad> ciudades, Ciudad inicial) {
 		for (Ciudad ciudad: ciudades) {
 		
 			if (inicial.getHabitantes()<ciudad.getHabitantes()) {
@@ -43,6 +50,22 @@ public class GestorPaises {
 			}
 		}
 		return inicial;
+	}
+	
+	public Ciudad gestCiudadMasGrandeDelMundo() {
+		
+		List<Ciudad> lista= new ArrayList<Ciudad>();
+		
+		Collection<List<Ciudad>> coleccion= paisesCiudades.values();
+		
+		for (List<Ciudad> listaCiudades: coleccion) {
+			
+			lista.addAll(listaCiudades);
+			
+		}
+		
+		return masHabitantes(lista, lista.get(0));
+		
 	}
 
 }

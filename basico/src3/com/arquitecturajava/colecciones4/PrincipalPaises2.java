@@ -11,7 +11,12 @@ public class PrincipalPaises2 {
 		gestor.addCiudadAPais(new Pais("Francia"), new Ciudad("Nantes",500_000));
 		
 		
-		System.out.println(gestor.getCiudadMasHabitantes(new Pais("Francia")));
+		gestor.addCiudadAPais(new Pais("España"), new Ciudad("Madrid",7000_000));
+		gestor.addCiudadAPais(new Pais("España"), new Ciudad("Bilbao",1000_000));
+		gestor.addCiudadAPais(new Pais("España"), new Ciudad("Barcelona",300_000));
+		
+		
+		System.out.println(gestor.gestCiudadMasGrandeDelMundo());
 	}
 
 }
