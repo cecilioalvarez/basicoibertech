@@ -1,4 +1,4 @@
-package com.arquitecturajava.jdbcpatrones;
+package com.arquitecturajava.jdbcpatrones2;
 
 import java.sql.SQLException;
 import java.util.List;

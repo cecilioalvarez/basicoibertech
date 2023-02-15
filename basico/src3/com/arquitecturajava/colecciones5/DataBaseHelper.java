@@ -7,7 +7,7 @@ import java.sql.Statement;
 
 public class DataBaseHelper {
 
-	public void actualizar(String sql) throws SQLException {
+	public void actualizar(String sql)  {
 
 		ConfiguradorDB c = new ConfiguradorDB();
 
@@ -16,8 +16,8 @@ public class DataBaseHelper {
 			s.executeUpdate(sql);
 
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			throw e;
+			e.printStackTrace();
+			throw new RuntimeException(e);
 		}
 	}
 
@@ -32,7 +32,7 @@ public class DataBaseHelper {
 			s.executeQuery(sql);
 			return s;
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			e.printStackTrace();
 			throw e;
 		}
 	}

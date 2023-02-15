@@ -1,9 +1,11 @@
-package com.arquitecturajava.jdbcpatrones;
+package com.arquitecturajava.jdbcpatrones2;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.List;
 
 public class DataBaseHelper {
 
@@ -24,13 +26,15 @@ public class DataBaseHelper {
 		}
 	}
 
-	public Statement seleccionar(String sql) throws SQLException {
+	public  <T> List<T> seleccionar(String sql, Class<T> tipo) throws SQLException {
 
 		ConfiguradorDB c = new ConfiguradorDB();
 
 		Connection con = DriverManager.getConnection(c.getUrl(), c.getUser(), c.getPassword());
 		Statement s = con.createStatement();
-		s.executeQuery(sql);
+		ResultSet rs=s.executeQuery(sql);
+		
+		tipo.getClass().getName();
 		return s;
 
 	}

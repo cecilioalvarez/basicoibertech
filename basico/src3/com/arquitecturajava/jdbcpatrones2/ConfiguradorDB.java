@@ -1,4 +1,4 @@
-package com.arquitecturajava.jdbcpatrones;
+package com.arquitecturajava.jdbcpatrones2;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
