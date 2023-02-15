@@ -21,8 +21,12 @@ public class PrincipalPatron1 {
 			System.out.println(p.getNombre());
 		}*/
 		
-		PersonaActiveRecord p1= new PersonaActiveRecord("maria");
-		p1.borrar();
+		//PersonaActiveRecord p1= new PersonaActiveRecord("maria");
+		//p1.borrar();
+		PersonaActiveRecord p=PersonaActiveRecord.buscarUno("pepe");
+		System.out.println(p.getNombre());
+		System.out.println(p.getApellidos());
+		System.out.println(p.getEdad());
 		
 	}
 

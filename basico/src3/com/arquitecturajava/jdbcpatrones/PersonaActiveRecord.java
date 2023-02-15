@@ -12,50 +12,57 @@ public class PersonaActiveRecord {
 	private String nombre;
 	private String apellidos;
 	private int edad;
-	
+
 	public String getNombre() {
 		return nombre;
 	}
+
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
+
 	public String getApellidos() {
 		return apellidos;
 	}
+
 	public void setApellidos(String apellidos) {
 		this.apellidos = apellidos;
 	}
+
 	public int getEdad() {
 		return edad;
 	}
+
 	public void setEdad(int edad) {
 		this.edad = edad;
 	}
+
 	public PersonaActiveRecord(String nombre, String apellidos, int edad) {
 		super();
 		this.nombre = nombre;
 		this.apellidos = apellidos;
 		this.edad = edad;
 	}
+
 	public PersonaActiveRecord(String nombre) {
 		super();
 		this.nombre = nombre;
 	}
-	
+
 	public static List<PersonaActiveRecord> buscarTodos() {
-		
+
 		DataBaseHelper helper = new DataBaseHelper();
 		String sql = "select * from personas";
-		List<PersonaActiveRecord> listaPersonas= new ArrayList<>();
-		
+		List<PersonaActiveRecord> listaPersonas = new ArrayList<>();
 
 		try (Statement st = helper.seleccionar(sql);
-				Connection con= st.getConnection();
-				ResultSet rs =st.getResultSet()) {
+				Connection con = st.getConnection();
+				ResultSet rs = st.getResultSet()) {
 
 			while (rs.next()) {
 
-				listaPersonas.add(new PersonaActiveRecord(rs.getString("nombre"),rs.getString("apellidos"),rs.getInt("edad")));
+				listaPersonas.add(
+						new PersonaActiveRecord(rs.getString("nombre"), rs.getString("apellidos"), rs.getInt("edad")));
 			}
 
 		} catch (SQLException e) {
@@ -64,9 +71,33 @@ public class PersonaActiveRecord {
 		}
 		return listaPersonas;
 	}
-	
+
+	public static PersonaActiveRecord buscarUno(String nombre) {
+
+		DataBaseHelper helper = new DataBaseHelper();
+		String sql = "select * from personas where nombre='" + nombre + "'";
+		List<PersonaActiveRecord> listaPersonas = new ArrayList<>();
+		PersonaActiveRecord persona = null;
+
+		try (Statement st = helper.seleccionar(sql);
+				Connection con = st.getConnection();
+				ResultSet rs = st.getResultSet()) {
+
+			rs.next();
+
+			persona = new PersonaActiveRecord(rs.getString("nombre"), rs.getString("apellidos"), rs.getInt("edad"));
+
+		} catch (
+
+		SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return persona;
+	}
+
 	public void insertar() {
-		
+
 		DataBaseHelper helper = new DataBaseHelper();
 		String sql = "insert into Personas  (nombre,apellidos,edad) values ('" + this.getNombre() + "','"
 				+ this.getApellidos() + "'," + this.getEdad() + ")";
@@ -77,8 +108,9 @@ public class PersonaActiveRecord {
 			e.printStackTrace();
 		}
 	}
+
 	public void borrar() {
-		
+
 		DataBaseHelper helper = new DataBaseHelper();
 
 		String sql = "delete from Personas where nombre='" + this.getNombre() + "'";
@@ -89,5 +121,5 @@ public class PersonaActiveRecord {
 			e.printStackTrace();
 		}
 	}
-	 
+
 }
