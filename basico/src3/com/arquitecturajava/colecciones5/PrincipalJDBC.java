@@ -10,38 +10,17 @@ public class PrincipalJDBC {
 
 	public static void main(String[] args) {
 
-		Connection con = null;
-		Statement s = null;
-		ResultSet rs = null;
-
-		try {
-			// Obtener una conexión a base de datos y preparar una sentencia.
-			Class.forName("com.mysql.jdbc.Driver");
-			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/boot", "root", "root");
-
-			s = con.createStatement();
-
-			rs = s.executeQuery("SELECT * FROM  Personas");
-
+		try (Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/boot", "root", "root");
+				Statement s = con.createStatement();
+				ResultSet rs = s.executeQuery("SELECT * FROM  Personas")) {
 			while (rs.next()) {
 
 				System.out.println("   Fila  " + rs.getString("nombre"));
 			}
-
-		} catch (Exception e) {
-
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} finally {
-
-			if (con != null) {
-				try {
-					con.close();
-				} catch (SQLException e) {
-					System.out.println("Error grave: no se puede cerrar el objeto conexión");
-				}
-			}
 		}
-
 	}
 
 }
