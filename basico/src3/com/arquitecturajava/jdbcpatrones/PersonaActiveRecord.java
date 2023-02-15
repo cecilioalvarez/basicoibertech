@@ -64,5 +64,30 @@ public class PersonaActiveRecord {
 		}
 		return listaPersonas;
 	}
+	
+	public void insertar() {
+		
+		DataBaseHelper helper = new DataBaseHelper();
+		String sql = "insert into Personas  (nombre,apellidos,edad) values ('" + this.getNombre() + "','"
+				+ this.getApellidos() + "'," + this.getEdad() + ")";
+		try {
+			helper.actualizar(sql);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	public void borrar() {
+		
+		DataBaseHelper helper = new DataBaseHelper();
+
+		String sql = "delete from Personas where nombre='" + this.getNombre() + "'";
+		try {
+			helper.actualizar(sql);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 	 
 }
