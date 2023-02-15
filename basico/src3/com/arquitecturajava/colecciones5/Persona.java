@@ -30,6 +30,10 @@ public class Persona {
 		this.apellidos = apellidos;
 		this.edad = edad;
 	}
+	public Persona(String nombre) {
+		super();
+		this.nombre = nombre;
+	}
 	
 	
 }
