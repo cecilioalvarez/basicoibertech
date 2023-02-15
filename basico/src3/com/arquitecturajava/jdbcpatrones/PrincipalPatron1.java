@@ -1,21 +1,29 @@
-package com.arquitecturajava.colecciones5;
+package com.arquitecturajava.jdbcpatrones;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
+import java.util.List;
 
-public class PrincipalJDBC8 {
+
+
+public class PrincipalPatron1 {
 
 	public static void main(String[] args) {
 
 		//insertarPersona( new PersonaActiveRecord ("paquito","sanchez",10));
 
 		//borrarPersona(new PersonaActiveRecord("paquito"));
-		seleccionarPersonas();
+		
+		List<PersonaActiveRecord> lista=PersonaActiveRecord.buscarTodos();
+		
+		for (PersonaActiveRecord p:lista) {
+			
+			System.out.println(p.getNombre());
+		}
+		
+		
 	}
 
-	public static void insertarPersona(Persona persona) {
+	public static void insertarPersona(PersonaActiveRecord persona) {
 
 		DataBaseHelper helper = new DataBaseHelper();
 		String sql = "insert into Personas  (nombre,apellidos,edad) values ('" + persona.getNombre() + "','"
@@ -28,7 +36,7 @@ public class PrincipalJDBC8 {
 		}
 	}
 
-	public static void borrarPersona(Persona persona) {
+	public static void borrarPersona(PersonaActiveRecord persona) {
 
 		DataBaseHelper helper = new DataBaseHelper();
 
@@ -41,25 +49,6 @@ public class PrincipalJDBC8 {
 		}
 	}
 	
-	public static void seleccionarPersonas() {
-
-		DataBaseHelper helper = new DataBaseHelper();
-
-		String sql = "select * from personas";
-
-		try (Statement st = helper.seleccionar(sql);
-				Connection con= st.getConnection();
-				ResultSet rs =st.getResultSet()) {
-
-			while (rs.next()) {
-
-				System.out.println(rs.getString("nombre"));
-			}
-
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
+	
 
 }

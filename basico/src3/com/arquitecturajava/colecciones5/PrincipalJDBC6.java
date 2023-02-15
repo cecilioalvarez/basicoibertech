@@ -12,7 +12,7 @@ public class PrincipalJDBC6 {
 
 		insertarPersona( new Persona ("paquito","sanchez",10));
 
-		//borrarPersona(new Persona("paquito"));
+		//borrarPersona(new PersonaActiveRecord("paquito"));
 	}
 
 	public static void insertarPersona(Persona persona) {

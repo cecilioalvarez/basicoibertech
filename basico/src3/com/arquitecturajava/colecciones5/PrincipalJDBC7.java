@@ -10,7 +10,7 @@ public class PrincipalJDBC7 {
 
 	public static void main(String[] args) {
 
-		// insertarPersona( new Persona ("paquito","sanchez",10));
+		// insertarPersona( new PersonaActiveRecord ("paquito","sanchez",10));
 		
 		borrarPersona (new Persona ("paquito"));
 	}
