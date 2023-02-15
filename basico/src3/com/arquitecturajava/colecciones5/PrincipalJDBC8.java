@@ -1,18 +1,18 @@
 package com.arquitecturajava.colecciones5;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class PrincipalJDBC6 {
+public class PrincipalJDBC8 {
 
 	public static void main(String[] args) {
 
-		insertarPersona( new Persona ("paquito","sanchez",10));
+		//insertarPersona( new Persona ("paquito","sanchez",10));
 
 		//borrarPersona(new Persona("paquito"));
+		seleccionarPersonas();
 	}
 
 	public static void insertarPersona(Persona persona) {
@@ -35,6 +35,27 @@ public class PrincipalJDBC6 {
 		String sql = "delete from Personas where nombre='" + persona.getNombre() + "'";
 		try {
 			helper.actualizar(sql);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public static void seleccionarPersonas() {
+
+		DataBaseHelper helper = new DataBaseHelper();
+
+		String sql = "select * from personas";
+
+		try (Statement st = helper.seleccionar(sql);
+				Connection con= st.getConnection();
+				ResultSet rs =st.getResultSet()) {
+
+			while (rs.next()) {
+
+				System.out.println(rs.getString("nombre"));
+			}
+
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
