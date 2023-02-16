@@ -6,7 +6,7 @@ public class PersonaRepository {
 
 	
 	
-	public static List<Persona> buscarTodos() {
+	public  List<Persona> buscarTodos() {
 
 		DataBaseHelper helper = new DataBaseHelper();
 		String sql = "select * from personas";
@@ -15,7 +15,7 @@ public class PersonaRepository {
 		
 	}
 
-	public static Persona buscarUno(String nombre) {
+	public  Persona buscarUno(String nombre) {
 
 		DataBaseHelper helper = new DataBaseHelper();
 		String sql = "select * from personas where nombre'" + nombre + "'";
