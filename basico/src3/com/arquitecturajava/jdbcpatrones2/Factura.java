@@ -7,6 +7,9 @@ public class Factura {
 	private double importe;
 	
 	
+	public Factura() {
+		super();
+	}
 	public Factura(String numero, String concepto, double importe) {
 		super();
 		this.numero = numero;

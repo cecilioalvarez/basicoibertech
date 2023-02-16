@@ -32,6 +32,9 @@ public class Persona implements Comparable<Persona> {
 		this.nombre = nombre;
 		this.edad = edad;
 	}
+	public Persona() {
+		// TODO Auto-generated constructor stub
+	}
 	@Override
 	public int compareTo(Persona o) {
 		// TODO Auto-generated method stub
