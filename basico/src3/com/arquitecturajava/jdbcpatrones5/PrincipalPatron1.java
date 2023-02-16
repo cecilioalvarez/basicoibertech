@@ -12,7 +12,7 @@ public class PrincipalPatron1 {
 		//insertarPersona( new PersonaActiveRecord ("paquito","sanchez",10));
 
 		//borrarPersona(new PersonaActiveRecord("paquito"));
-		PersonaRepository repoPersona= new PersonaRepository();
+		PersonaRepository repoPersona= new PersonaRepositoryJDBC();
 		
 		List<Persona> lista=repoPersona.buscarTodos("edad","asc");
 		
