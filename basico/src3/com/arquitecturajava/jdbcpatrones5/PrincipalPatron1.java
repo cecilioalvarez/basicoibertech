@@ -14,12 +14,13 @@ public class PrincipalPatron1 {
 		//borrarPersona(new PersonaActiveRecord("paquito"));
 		PersonaRepository repoPersona= new PersonaRepository();
 		
-		List<Persona> lista=repoPersona.buscarTodos();
+		List<Persona> lista=repoPersona.buscarTodos("edad");
 		
 		
 		for (Persona p:lista) {
 			
 			System.out.println(p.getNombre());
+			System.out.println(p.getEdad());
 		}
 		 
 		
