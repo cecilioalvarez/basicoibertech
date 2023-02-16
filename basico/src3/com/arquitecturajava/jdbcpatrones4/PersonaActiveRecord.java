@@ -1,4 +1,4 @@
-package com.arquitecturajava.jdbcpatrones3;
+package com.arquitecturajava.jdbcpatrones4;
 
 import java.util.List;
 
