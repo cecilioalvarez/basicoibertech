@@ -3,7 +3,7 @@ package basico;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Bolsa<T> {
+public class Bolsa<T extends Producto> {
 
 	private List<T> lista= new ArrayList<>();
 	private int tope;
@@ -30,5 +30,15 @@ public class Bolsa<T> {
 		this.tope = tope;
 	}
 	
+	public double precioFinal() {
+		
+		double total=0;
+		for (Producto p: lista) {
+			
+			total+=p.getPrecio();
+			
+		}
+		return total;
+	}
 	
 }
