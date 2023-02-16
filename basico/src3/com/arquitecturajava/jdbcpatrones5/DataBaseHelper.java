@@ -14,8 +14,6 @@ import java.util.List;
 public class DataBaseHelper {
 
 	
-	
-	
 	public void actualizar(String sql) {
 
 		ConfiguradorDB c = ConfiguradorDB.getInstance();
