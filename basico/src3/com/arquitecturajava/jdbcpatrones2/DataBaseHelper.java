@@ -26,17 +26,17 @@ public class DataBaseHelper {
 		}
 	}
 
-	public  <T> List<T> seleccionar(String sql, Class<T> tipo) throws SQLException {
-
-		ConfiguradorDB c = new ConfiguradorDB();
-
-		Connection con = DriverManager.getConnection(c.getUrl(), c.getUser(), c.getPassword());
-		Statement s = con.createStatement();
-		ResultSet rs=s.executeQuery(sql);
-		
-		tipo.getClass().getName();
-		return s;
-
-	}
+//	public  <T> List<T> seleccionar(String sql, Class<T> tipo) throws SQLException {
+//
+//		ConfiguradorDB c = new ConfiguradorDB();
+//
+//		Connection con = DriverManager.getConnection(c.getUrl(), c.getUser(), c.getPassword());
+//		Statement s = con.createStatement();
+//		ResultSet rs=s.executeQuery(sql);
+//		
+//		tipo.getClass().getName();
+//		
+//
+//	}
 
 }
