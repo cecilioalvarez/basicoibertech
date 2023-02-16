@@ -1,5 +1,7 @@
 package basico2;
 
+import basico.Caramelo;
+
 public class Principal {
 
 	public static void main(String[] args) {
@@ -14,6 +16,8 @@ public class Principal {
 		System.out.println(asignador.getResultado(new Persona("juan")).getNombre());
 		System.out.println(asignador.getResultado(new Persona("juan")).getImporte());
 		
+		
+		Asignador<Caramelo, Premio> asignador2= new Asignador<Caramelo,Premio>();
 	}
 
 }
