@@ -21,6 +21,16 @@ public class PersonaRepository {
 			
 		
 	}
+	
+	public  List<Persona> buscarTodos(String orden, String direccion) {
+
+		String sql = "select * from personas order by " +orden;
+		
+		sql+=" "+ direccion;
+		return  getHelper().seleccionar(sql,Persona.class);
+			
+		
+	}
 
 	private DataBaseHelper getHelper() {
 		DataBaseHelper helper = new DataBaseHelper();

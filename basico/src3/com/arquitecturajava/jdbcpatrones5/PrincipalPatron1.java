@@ -14,7 +14,7 @@ public class PrincipalPatron1 {
 		//borrarPersona(new PersonaActiveRecord("paquito"));
 		PersonaRepository repoPersona= new PersonaRepository();
 		
-		List<Persona> lista=repoPersona.buscarTodos("edad");
+		List<Persona> lista=repoPersona.buscarTodos("edad","asc");
 		
 		
 		for (Persona p:lista) {
