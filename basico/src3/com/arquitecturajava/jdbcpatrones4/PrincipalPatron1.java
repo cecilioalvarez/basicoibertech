@@ -15,11 +15,16 @@ public class PrincipalPatron1 {
 		
 		
 		List<PersonaActiveRecord> lista=PersonaActiveRecord.buscarTodos();
+		 lista=PersonaActiveRecord.buscarTodos();
+		 lista=PersonaActiveRecord.buscarTodos();
+		 lista=PersonaActiveRecord.buscarTodos();
+		 lista=PersonaActiveRecord.buscarTodos();
 		
 		for (PersonaActiveRecord p:lista) {
 			
 			System.out.println(p.getNombre());
 		}
+		 
 		
 		//PersonaActiveRecord p1= new PersonaActiveRecord("maria");
 		//p1.borrar();

@@ -20,7 +20,7 @@ public class ConfiguradorDB {
 	
 	private ConfiguradorDB() {
 		
-		
+		System.out.println("pasamos por el cosntructor");
 				
 		try (FileInputStream fos = new FileInputStream("database.properties");) {
 			Properties p = new Properties();
